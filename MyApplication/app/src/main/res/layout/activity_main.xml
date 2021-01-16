@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityA"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Random Text"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <View
+        android:background="@color/green"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/btnActB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/lgBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="20dp"
+        android:text="TEXTO TEXTO TEXTO"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+            android:background="@color/orange"
+            android:layout_width="165dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="30dp" />
+        <View
+            android:background="@color/orange"
+            android:layout_width="165dp"
+            android:layout_height="75dp"/>
+    </LinearLayout>
+
+</LinearLayout>
