@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.samples">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Samples">
+        <activity android:name=".intents.pure.PureA"/>
+        <activity android:name=".intents.pure.PureB"/>
+
+        <activity android:name=".intents.extra.ExtraA"/>
+        <activity android:name=".intents.extra.ExtraB"/>
+
+        <activity android:name=".intents.parcelable.ParcelableA"/>
+        <activity android:name=".intents.parcelable.ParcelableB"/>
+
+        <activity android:name=".intents.forResult.ForResultA"/>
+        <activity android:name=".intents.forResult.ForResultB"/>
+
+        <activity android:name=".intents.forResult.Chooser">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
