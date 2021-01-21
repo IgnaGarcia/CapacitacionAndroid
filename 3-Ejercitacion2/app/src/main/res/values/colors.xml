@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="orange_200">#FB9F58</color>
+    <color name="orange_500">#EF5F54</color>
+    <color name="orange_700">#C44057</color>
+    <color name="red_200">#A83E5C</color>
+    <color name="red_100">#E35A81</color>
+    <color name="red_500">#713448</color>
+    <color name="red_700">#7B2B4F</color>
+    <color name="violet_700">#482752</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#DEDEDE</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

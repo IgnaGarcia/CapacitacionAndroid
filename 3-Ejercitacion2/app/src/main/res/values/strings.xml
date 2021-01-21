@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ejercitacion 2</string>
+    <string name="login">Ingresar</string>
+    <string name="singup">Registrarse</string>
+    <string name="user">Nombre de Usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="name">Nombre</string>
+    <string name="surname">Apellido</string>
+    <string name="mail">Correo Electronico</string>
+    <string name="confirmPass">Repita la Contraseña</string>
+    <string name="aceptTerms">Yo acepto los Terminos y Condiciones</string>
+    <string name="home">Home</string>
+</resources>
