@@ -9,30 +9,38 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
         <TextView
             android:id="@+id/tvName"
             tools:text="Name"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="@id/tvAge"
+            app:layout_constraintRight_toRightOf="@id/tvIsSiteAdmin"
             android:layout_width="wrap_content"
             android:textSize="20sp"
             android:layout_height="wrap_content"
             android:textColor="@color/white"/>
         <TextView
-            android:id="@+id/tvSurname"
-            tools:text="Surname"
+            android:id="@+id/tvType"
+            tools:text="Type"
             app:layout_constraintTop_toBottomOf="@id/tvName"
             android:textColor="@color/white"
-            app:layout_constraintRight_toRightOf="@id/tvAge"
+            app:layout_constraintRight_toRightOf="@id/tvIsSiteAdmin"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_width="wrap_content"
             android:textSize="18sp"
             android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/tvAge"
-            tools:text="n/a"
+            android:id="@+id/tvIsSiteAdmin"
+            android:text="30"
             android:textColor="@color/white"
             app:layout_constraintLeft_toRightOf="@id/tvName"
             app:layout_constraintRight_toRightOf="parent"

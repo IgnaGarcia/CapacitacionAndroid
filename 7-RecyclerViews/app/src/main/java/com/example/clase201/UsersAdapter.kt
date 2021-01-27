@@ -3,22 +3,34 @@ package com.example.clase201
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
-class UsersAdapter(var users : List<User>) : RecyclerView.Adapter<UsersAdapter.BaseViewHolder>(){
+//on clickuser es cb para enviar el intent al detalle
+//Glide y Picasso para cargar imagenes
+class UsersAdapter(var users : List<User>, var onClickUser : OnClickUser) : RecyclerView.Adapter<UsersAdapter.BaseViewHolder>(){
 
-    class BaseViewHolder(view : View) : RecyclerView.ViewHolder(view) {
+    inner class BaseViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val tvName = view.findViewById<TextView>(R.id.tvName)
-        val tvSurname = view.findViewById<TextView>(R.id.tvSurname)
-        val tvAge = view.findViewById<TextView>(R.id.tvAge)
+        val tvType = view.findViewById<TextView>(R.id.tvType)
+        val tvIsSiteAdmin = view.findViewById<TextView>(R.id.tvIsSiteAdmin)
+        val ivProfile = view.findViewById<ImageView>(R.id.ivProfile)
         //cargar imagen aca tambien si la hubiera
 
         fun onBind(user : User){
-            tvName.text = user.name
-            tvSurname.text = user.surname
-            tvAge.text = user.age
-            //controles aca, es cuando se manda a la vista
+            tvName.text = user.login
+            tvType.text = user.type
+            tvIsSiteAdmin.text = if(user.siteAdmin) "Es admin" else "No es admin"
+
+            Glide.with(ivProfile.context).load(user.avatarUrl)
+                    .circleCrop().into(ivProfile)
+
+            //evento dentro de un recycler
+            itemView.setOnClickListener{
+                onClickUser.onClickUser(user.login)
+            }
         }
     }
 
@@ -33,4 +45,8 @@ class UsersAdapter(var users : List<User>) : RecyclerView.Adapter<UsersAdapter.B
     }
 
     override fun getItemCount(): Int = users.size
+
+    interface OnClickUser{
+        fun onClickUser(username : String)
+    }
 }
