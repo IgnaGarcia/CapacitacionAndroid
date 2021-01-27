@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ejercicio3">
         <activity android:name=".activities.HomeActivity"
-            android:theme="@style/Theme.Home">
+            android:theme="@style/ThemeSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,8 +24,6 @@
             android:parentActivityName=".activities.HomeActivity"/>
         <activity android:name=".activities.PlateActivity"
             android:parentActivityName=".activities.PlatesListActivity"/>
-
-        <activity android:name=".activities.SplashActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"

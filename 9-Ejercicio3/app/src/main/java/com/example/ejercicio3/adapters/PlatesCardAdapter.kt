@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -19,6 +20,7 @@ class PlatesCardAdapter(var plates : List<Plate>, var onClickPlate : PlatesCardA
         val tvPlateName = view.findViewById<TextView>(R.id.tvPlateNameCard)
         val tvPlatePrice = view.findViewById<TextView>(R.id.tvPlatePriceCard)
         val tvPlateSINTACC = view.findViewById<TextView>(R.id.tvPlateSINTACCCard)
+        val llCheapest = view.findViewById<LinearLayout>(R.id.llCheapest)
 
 
         fun onBind(plate : Plate){
@@ -28,6 +30,8 @@ class PlatesCardAdapter(var plates : List<Plate>, var onClickPlate : PlatesCardA
             tvPlateName.text = plate.title
             tvPlatePrice.text = "\$${plate.pricePerServing.toString()}"
             tvPlateSINTACC.text = if(plate.glutenFree) App.instance.getString(R.string.glutenFree) else ""
+
+            if(plate.cheap) llCheapest.visibility = View.VISIBLE else llCheapest.visibility = View.GONE
 
             itemView.setOnClickListener{
                 onClickPlate.onClickPlate(plate.id)

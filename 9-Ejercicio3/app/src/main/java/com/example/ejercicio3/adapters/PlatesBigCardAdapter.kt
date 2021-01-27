@@ -27,7 +27,7 @@ class PlatesBigCardAdapter(var plates : List<Plate>, var onClickPlate : OnClickP
             vPlateFavourite.background = if(plate.isFavourite)App.instance.getDrawable(R.drawable.layerlist_favourite_on)
                                         else App.instance.getDrawable(R.drawable.layerlist_favourite)
             tvPlateName.text = plate.title
-            tvPlateDescription.text = "Para ${plate.servings} personas."
+            tvPlateDescription.text = if(plate.cuisines.isNullOrEmpty()) "-" else plate.cuisines.reduce { acc, string -> "$acc, $string" }
             tvPlatePrice.text = "\$${plate.pricePerServing.toString()}"
             tvPlateSINTACC.text = if(plate.glutenFree) App.instance.getString(R.string.glutenFree) else ""
 

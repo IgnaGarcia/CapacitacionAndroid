@@ -15,13 +15,13 @@
 
         <ImageView
             android:id="@+id/ivPlatePhoto"
-            android:layout_width="310dp"
+            android:layout_width="330dp"
             tools:src="@drawable/plate_ph"
-            android:layout_height="330dp"/>
+            android:layout_height="340dp"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="300dp"
-            android:layout_height="320dp"
+            android:layout_width="310dp"
+            android:layout_height="330dp"
             android:layout_gravity="center"
             android:background="#00000000"
             android:paddingHorizontal="15dp"

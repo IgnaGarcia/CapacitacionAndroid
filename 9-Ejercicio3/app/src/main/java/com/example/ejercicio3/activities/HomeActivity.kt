@@ -26,6 +26,8 @@ class HomeActivity : AppCompatActivity(), PlatesBigCardAdapter.OnClickPlate {
     var plateAdapter : PlatesBigCardAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.ThemeHome)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 

@@ -51,7 +51,8 @@ class PlateActivity : AppCompatActivity() {
         val tvPlatePriceDetail = findViewById<TextView>(R.id.tvPlatePriceDetail)
         val tvPlateRaiting = findViewById<TextView>(R.id.tvPlateRaiting)
         val tvIngredients = findViewById<TextView>(R.id.tvIngredients)
-        val llGlutenFree = findViewById<LinearLayout>(R.id.tvGlutenFree)
+        val llGlutenFree = findViewById<LinearLayout>(R.id.llGlutenFree)
+        val llDairyFree = findViewById<LinearLayout>(R.id.llDairyFree)
 
         Glide.with(ivPlatePhotoDetail.context).load(plate.image).into(ivPlatePhotoDetail)
 
@@ -59,13 +60,14 @@ class PlateActivity : AppCompatActivity() {
         //else App.instance.getDrawable(R.drawable.layerlist_favourite)
 
         tvPlateNameDetail.text = plate.title
-        tvPlateDescriptionDetail.text = "Para ${plate.servings} personas."
+        tvPlateDescriptionDetail.text = if(plate.cuisines.isNullOrEmpty()) "-" else plate.cuisines.reduce { acc, string -> "$acc, $string" }
         tvPlatePriceDetail.text = "\$${plate.pricePerServing.toString()}"
         tvPlateRaiting.text = plate.spoonacularScore.toString()
 
         tvIngredients.text = listToString(plate.extendedIngredients)
 
         if(plate.glutenFree) llGlutenFree.visibility = View.VISIBLE else llGlutenFree.visibility = View.GONE
+        if(plate.dairyFree) llDairyFree.visibility = View.VISIBLE else llDairyFree.visibility = View.GONE
     }
 
     fun listToString(ingredients : List<ExtendedIngredient>) : String{

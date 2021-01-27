@@ -127,7 +127,7 @@
                     android:textSize="13sp"/>
 
                 <LinearLayout
-                    android:id="@+id/tvGlutenFree"
+                    android:id="@+id/llGlutenFree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -145,6 +145,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/glutenFree"
+                        android:textColor="@color/textPrimary"
+                        android:paddingHorizontal="8dp"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDairyFree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/ic_verified"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dairyFree"
                         android:textColor="@color/textPrimary"
                         android:paddingHorizontal="8dp"
                         android:textSize="13sp"/>

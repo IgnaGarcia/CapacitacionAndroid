@@ -66,6 +66,7 @@
                android:textSize="16sp"/>
 
            <LinearLayout
+               android:id="@+id/llCheapest"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="horizontal">
@@ -81,7 +82,7 @@
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="@string/freeDelivery"
+                   android:text="@string/cheapest"
                    android:textColor="@color/textSecondary"
                    android:paddingHorizontal="8dp"
                    android:textSize="13sp"/>

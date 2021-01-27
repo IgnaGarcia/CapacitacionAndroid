@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
 
 object ApiClient{
     private const val API_KEY = "fd926ca241f8421da10f7370f3cf73a4"
-    private const val API_BASE_URL = " https://api.spoonacular.com/"
+    private const val API_BASE_URL = "https://api.spoonacular.com/"
 
     private var mInterface : AppService
     private var mRetrofitAdapter : Retrofit

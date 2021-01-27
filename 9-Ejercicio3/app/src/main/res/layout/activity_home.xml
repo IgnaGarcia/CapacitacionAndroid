@@ -108,7 +108,7 @@
         android:id="@+id/clPromosText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
+        android:padding="12dp"
         app:layout_constraintTop_toBottomOf="@id/llCategories"
         app:layout_constraintBottom_toTopOf="@id/llPlates"
         app:layout_constraintLeft_toLeftOf="parent"
