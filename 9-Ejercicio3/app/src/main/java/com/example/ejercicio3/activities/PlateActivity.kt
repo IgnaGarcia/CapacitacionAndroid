@@ -45,7 +45,6 @@ class PlateActivity : AppCompatActivity() {
     //Cargar datos a la vista
     fun bindData(plate : PlateResponse){
         val ivPlatePhotoDetail = findViewById<ImageView>(R.id.ivPlatePhotoDetail)
-        val vPlateFavouriteCard = findViewById<View>(R.id.vPlateFavouriteCard)
         val tvPlateNameDetail = findViewById<TextView>(R.id.tvPlateNameDetail)
         val tvPlateDescriptionDetail = findViewById<TextView>(R.id.tvPlateDescriptionDetail)
         val tvPlatePriceDetail = findViewById<TextView>(R.id.tvPlatePriceDetail)
@@ -56,8 +55,11 @@ class PlateActivity : AppCompatActivity() {
 
         Glide.with(ivPlatePhotoDetail.context).load(plate.image).into(ivPlatePhotoDetail)
 
-        //vPlateFavouriteCard.background = if(plate.isFavourite)App.instance.getDrawable(R.drawable.layerlist_favourite_on)
-        //else App.instance.getDrawable(R.drawable.layerlist_favourite)
+        /*
+        val vPlateFavouriteCard = findViewById<View>(R.id.vPlateFavouriteCard)
+        vPlateFavouriteCard.background = if(plate.isFavourite)App.instance.getDrawable(R.drawable.layerlist_favourite_on)
+        else App.instance.getDrawable(R.drawable.layerlist_favourite)
+        */
 
         tvPlateNameDetail.text = plate.title
         tvPlateDescriptionDetail.text = if(plate.cuisines.isNullOrEmpty()) "-" else plate.cuisines.reduce { acc, string -> "$acc, $string" }
@@ -70,12 +72,14 @@ class PlateActivity : AppCompatActivity() {
         if(plate.dairyFree) llDairyFree.visibility = View.VISIBLE else llDairyFree.visibility = View.GONE
     }
 
+    //Convertir la lista de ingredientes en un string
     fun listToString(ingredients : List<ExtendedIngredient>) : String{
         var ingrList : String = "Ingredientes:"
         for(ingr in ingredients) ingrList = "$ingrList\n- ${ingr.originalName}"
         return ingrList
     }
 
+    //Traer datos de la API
     private fun getPlateDetails(tvErr : TextView, plate : Int){
         ApiClient.getServiceClient().getPlateDetails(plate)
             .enqueue(object: Callback<PlateResponse> {

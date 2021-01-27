@@ -20,7 +20,7 @@ class PlatesCardAdapter(var plates : List<Plate>, var onClickPlate : PlatesCardA
         val tvPlateName = view.findViewById<TextView>(R.id.tvPlateNameCard)
         val tvPlatePrice = view.findViewById<TextView>(R.id.tvPlatePriceCard)
         val tvPlateSINTACC = view.findViewById<TextView>(R.id.tvPlateSINTACCCard)
-        val llCheapest = view.findViewById<LinearLayout>(R.id.llCheapest)
+        val llPopular = view.findViewById<LinearLayout>(R.id.llPopular)
 
 
         fun onBind(plate : Plate){
@@ -31,7 +31,7 @@ class PlatesCardAdapter(var plates : List<Plate>, var onClickPlate : PlatesCardA
             tvPlatePrice.text = "\$${plate.pricePerServing.toString()}"
             tvPlateSINTACC.text = if(plate.glutenFree) App.instance.getString(R.string.glutenFree) else ""
 
-            if(plate.cheap) llCheapest.visibility = View.VISIBLE else llCheapest.visibility = View.GONE
+            if(plate.veryPopular) llPopular.visibility = View.VISIBLE else llPopular.visibility = View.GONE
 
             itemView.setOnClickListener{
                 onClickPlate.onClickPlate(plate.id)

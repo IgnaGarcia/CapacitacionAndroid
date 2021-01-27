@@ -71,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/textPrimary"
                         tools:text="Plato de Prueba"
-                        android:textFontWeight="500"
+                        android:textFontWeight="600"
                         android:textSize="22sp"/>
 
                     <TextView
@@ -109,22 +109,31 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center">
-                <TextView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:gravity="center"
-                    android:background="@drawable/ic_star"/>
-
-                <TextView
-                    android:id="@+id/tvPlateRaiting"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5.0"
-                    android:textColor="@color/textPrimary"
-                    android:paddingHorizontal="8dp"
-                    android:textSize="13sp"/>
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:background="@drawable/ic_star"/>
+
+                    <TextView
+                        android:id="@+id/tvPlateRaiting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="5.0"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="13sp"
+                        android:layout_marginTop="1dp"
+                        android:paddingHorizontal="8dp"/>
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:id="@+id/llGlutenFree"

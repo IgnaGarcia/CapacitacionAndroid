@@ -26,9 +26,8 @@ class HomeActivity : AppCompatActivity(), PlatesBigCardAdapter.OnClickPlate {
     var plateAdapter : PlatesBigCardAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.ThemeHome)
-
         super.onCreate(savedInstanceState)
+        setTheme(R.style.ThemeHome)
         setContentView(R.layout.activity_home)
 
         bindUserData()
@@ -40,9 +39,9 @@ class HomeActivity : AppCompatActivity(), PlatesBigCardAdapter.OnClickPlate {
     }
 
     //Intent a partir del click en una tarjeta del RecyclerView
-    override fun onClickPlate(plate : Int){
+    override fun onClickPlate(plateId : Int){
         val i = Intent(this@HomeActivity, PlateActivity::class.java)
-        i.putExtra(PlateActivity.PLATE_KEY, plate)
+        i.putExtra(PlateActivity.PLATE_KEY, plateId)
         startActivity(i)
     }
 

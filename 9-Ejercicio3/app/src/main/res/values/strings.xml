@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Ejercicio3</string>
+    <string name="app_name">0TeleFood</string>
     <string name="glutenFree">Apto celíacos</string>
     <string name="dairyFree">Libre de lácteos</string>
-    <string name="cheapest">Con Descuento</string>
+    <string name="popular">Muy Popular</string>
     <string name="favourites">Favoritos</string>
     <string name="offers">Ofertas</string>
     <string name="trends">Tendencias</string>

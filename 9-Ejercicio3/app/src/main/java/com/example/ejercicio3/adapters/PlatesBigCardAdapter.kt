@@ -25,7 +25,7 @@ class PlatesBigCardAdapter(var plates : List<Plate>, var onClickPlate : OnClickP
         fun onBind(plate : Plate){
             Glide.with(ivPlatePhoto.context).load(plate.image).centerCrop().into(ivPlatePhoto)
             vPlateFavourite.background = if(plate.isFavourite)App.instance.getDrawable(R.drawable.layerlist_favourite_on)
-                                        else App.instance.getDrawable(R.drawable.layerlist_favourite)
+                                       else App.instance.getDrawable(R.drawable.layerlist_favourite)
             tvPlateName.text = plate.title
             tvPlateDescription.text = if(plate.cuisines.isNullOrEmpty()) "-" else plate.cuisines.reduce { acc, string -> "$acc, $string" }
             tvPlatePrice.text = "\$${plate.pricePerServing.toString()}"

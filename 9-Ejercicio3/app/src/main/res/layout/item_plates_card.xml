@@ -55,8 +55,8 @@
                android:layout_height="wrap_content"
                android:textColor="@color/textPrimary"
                tools:text="Plato de ptueba"
-               android:textFontWeight="500"
-               android:textSize="18sp"/>
+               android:textFontWeight="600"
+               android:textSize="16sp"/>
 
            <TextView
                android:id="@+id/tvPlatePriceCard"
@@ -64,28 +64,28 @@
                android:layout_height="wrap_content"
                android:textColor="@color/textSecondary"
                tools:text="$30.0"
-               android:paddingVertical="10dp"
-               android:textFontWeight="500"
+               android:layout_weight="1"
+               android:paddingVertical="5dp"
+               android:textFontWeight="400"
                android:textSize="16sp"/>
 
            <LinearLayout
-               android:id="@+id/llCheapest"
+               android:id="@+id/llPopular"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="horizontal">
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="%"
+               <View
+                   android:layout_width="24dp"
+                   android:layout_height="24dp"
                    android:textColor="@color/white"
                    android:textSize="12sp"
                    android:gravity="center"
-                   android:background="@drawable/shape_circle"/>
+                   android:background="@drawable/layerlist_popular"/>
 
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="@string/cheapest"
+                   android:text="@string/popular"
                    android:textColor="@color/textSecondary"
                    android:paddingHorizontal="8dp"
                    android:textSize="13sp"/>

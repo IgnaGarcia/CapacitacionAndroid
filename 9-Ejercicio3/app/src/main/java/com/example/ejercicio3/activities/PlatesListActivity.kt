@@ -36,6 +36,7 @@ class PlatesListActivity : AppCompatActivity(), PlatesCardAdapter.OnClickPlate  
         startActivity(i)
     }
 
+    //Pasarle al RecyclerView los datos
     fun setPlatesAdapter(rvPlatesCards : RecyclerView, plates : List<Plate>){
         plateCardAdapter = PlatesCardAdapter(plates, this)
 
