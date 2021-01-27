@@ -24,8 +24,8 @@ class PlatesCardAdapter(var plates : List<Plate>, var onClickPlate : PlatesCardA
 
 
         fun onBind(plate : Plate){
-            Glide.with(ivPlatePhoto.context).load(plate.image).into(ivPlatePhoto)
-            vPlateFavourite.background = if(plate.isFavourite)App.instance.getDrawable(R.drawable.layerlist_favourite_on)
+            Glide.with(ivPlatePhoto.context).load(plate.image).centerCrop().into(ivPlatePhoto)
+            vPlateFavourite.background = if(plate.isFavourite) App.instance.getDrawable(R.drawable.layerlist_favourite_on)
                     else App.instance.getDrawable(R.drawable.layerlist_favourite)
             tvPlateName.text = plate.title
             tvPlatePrice.text = "\$${plate.pricePerServing.toString()}"

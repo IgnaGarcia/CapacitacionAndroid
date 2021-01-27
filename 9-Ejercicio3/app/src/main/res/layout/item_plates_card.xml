@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginBottom="15dp">
 
 
@@ -23,11 +22,15 @@
            android:layout_height="wrap_content"
            android:gravity="center">
 
-           <ImageView
-               android:id="@+id/ivPlatePhotoCard"
-               android:layout_width="80dp"
-               tools:src="@drawable/plate_ph"
-               android:layout_height="90dp"/>
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:id="@+id/ivPlatePhotoCard"
+                   android:layout_width="80dp"
+                   tools:src="@drawable/plate_ph"
+                   android:layout_height="86dp"/>
+           </com.google.android.material.card.MaterialCardView>
            <TextView
                android:id="@+id/tvPlateSINTACCCard"
                android:layout_width="wrap_content"
