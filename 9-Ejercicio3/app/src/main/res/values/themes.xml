@@ -1,13 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="PoppinsTextViewStyle" parent="android:Widget.TextView">
-        <item name="android:fontFamily">@font/poppins</item>
-    </style>
-
-    <style name="PoppinsButtonStyle" parent="android:Widget.Holo.Button">
-        <item name="android:fontFamily">@font/poppins</item>
-    </style>
-
-    <style name="ThemeHome" parent="Theme.MaterialComponents.Light">
+        <style name="ThemeHome" parent="Theme.MaterialComponents.Light">
         <item name="colorPrimary">@color/primaryBrand</item>
         <item name="colorOnPrimary">@color/backgroundColor</item>
 
@@ -38,5 +30,13 @@
 
     <style name="Theme.Ejercicio3" parent="ThemeHome">
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSurface</item>
+    </style>
+
+    <style name="PoppinsTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="PoppinsButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/poppins</item>
     </style>
 </resources>

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:paddingHorizontal="18dp"
-        android:paddingVertical="15dp"
+        android:paddingVertical="12dp"
         app:navigationIcon="@drawable/ic_back_arrow">
 
         <TextView
